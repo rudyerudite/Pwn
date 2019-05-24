@@ -11,13 +11,13 @@ int 0x80
 
 mov ebx,eax       ;implementing read syscall
 mov eax,3
-mov ecx, 0x0804a100 ;storing location for the read data
+mov ecx, 0x0804a0b0 ;storing location for the read data
 mov edx, 100
 int 0x80
 
 mov eax,4         ;implementing write syscall to stdout
 mov ebx,1
-mov ecx,0x804a100   
+mov ecx,0x804a0b0   
 int 0x80
 
 mov eax,1         ;implementing exit syscall
